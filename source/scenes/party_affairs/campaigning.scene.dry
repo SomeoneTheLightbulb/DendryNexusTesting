@@ -13,7 +13,6 @@ tags: party_affairs
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
 - @workers: The urban working class, our traditional support base.
-- @workers_e: The urban working class, our traditional support base.
 - @new_middle: The "new middle class" of government employees and white-collar workers.
 - @old_middle: The "old middle class" of small independent businessmen and artisans.
 - @rural: Rural workers and small farmers, who have felt neglected by us in the past.
@@ -28,6 +27,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1; workers_spd += 1*(1-dissent) if sup_labor > sup_bourg and expansion = 1; workers_spd -= 1*(1-dissent) if sup_labor < sup_bourg and expansion = 1; workers_spd += 1*(1-dissent) if sup_labor > ((sup_bourg + 1)*2); workers_spd -= 2*(1-dissent) if sup_bourg > ((sup_labor + 1)*2) and expansion = 1
+go-to: campaign_choices.scene.dry if expansion = 1
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
 
