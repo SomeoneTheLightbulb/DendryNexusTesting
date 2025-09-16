@@ -27,6 +27,7 @@ The <span style="color: #7A3C00;">Nazis</span> are just another <span style="col
 @economic_crisis
 title: We must address the economic crisis first.
 view-if: economic_plan == 0 and black_thursday_seen == 1
+on-arrival: plan_choice += 1
 go-to: crisis_program
 
 @major_crisis
@@ -39,7 +40,7 @@ The <span style="color: #7A3C00;">Nazis</span> are one of the foremost threats t
 title: Form the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>!
 subtitle: The <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span> consists of the <span style="color: #c00000;">**SPD**</span>, the trade unions, and the Reichsbanner.
 view-if: nazi_urgency >= 3 and iron_front_formed == 0
-on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
+on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5; if_choice += 1
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -65,24 +66,24 @@ What do the three arrows stand for?
 - @all: All of the above.
 
 @unity
-on-arrival: left_dissent -= 5 if expansion = 1; center_dissent -= 5 if expansion = 1; labor_dissent -= 5 if expansion = 1; reformist_dissent -= 5 if expansion = 1;
+on-arrival: left_dissent -= 5 if expansion = 1; center_dissent -= 5 if expansion = 1; labor_dissent -= 5 if expansion = 1; reformist_dissent -= 5 if expansion = 1; dissent_choice += 1
 go-to: if_end
 
 @anti
-on-arrival: z_relation += 7 if expansion = 1; ddp_relation += 7 if expansion = 1;
+on-arrival: z_relation += 7 if expansion = 1; ddp_relation += 7 if expansion = 1; antifa_choice += 1
 go-to: if_end
 
 @orgs
-on-arrival: workers_spd += 3*(1-dissent) if expansion = 1; labor_strength += 5 if expansion = 1; rb_militancy += 0.03 if expansion = 1;
+on-arrival: workers_spd += 3*(1-dissent) if expansion = 1; labor_strength += 5 if expansion = 1; rb_militancy += 0.03 if expansion = 1; para_choice += 1
 go-to: if_end
 
 @wtb
-on-arrival: workers_spd += 2*(1-dissent) if expansion = 1; unemployed_spd += 2*(1-dissent) if expansion = 1 and works_program >= 1;
+on-arrival: workers_spd += 2*(1-dissent) if expansion = 1; unemployed_spd += 2*(1-dissent) if expansion = 1 and works_program >= 1; plan_choice += 1
 view-if: wtb_adopted == 1
 go-to: if_end
 
 @all
-on-arrival: neorevisionist_dissent -= (workers_spd/10) if expansion = 1;
+on-arrival: neorevisionist_dissent -= (workers_spd/10) if expansion = 1; free_choice += 1
 go-to: if_end
 
 @if_end
