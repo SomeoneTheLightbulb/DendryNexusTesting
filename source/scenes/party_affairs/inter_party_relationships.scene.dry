@@ -28,7 +28,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1
+go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1; comrel_choice += 1
 
 @kpd_1
 on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2 if z_ideology == "Right"; dvp_relation -= 3; ddp_relation -= 2; lvp_relation -= 3
@@ -72,7 +72,7 @@ subtitle: -1 resources
 view-if: not cvp_formed
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_ideology == "Left"
+on-arrival: resources -= 1; z_relation += 2 if z_ideology == "Left"; cenrel_choice += 1
 go-to: center_op if not spd_in_government and chancellor != "Brüning" and ((chancellor != "Papen" and chancellor != "Schleicher") or z_in_gov); center_op_2 if not spd_in_government and (chancellor == "Papen" or chancellor == "Schleicher") and not z_in_gov; center_coalition if spd_in_government; center_bruning if chancellor = "Brüning" and not spd_in_government
 
 @center_op
@@ -100,7 +100,7 @@ subtitle: -1 resources
 view-if: cvp_formed
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 6*(1 - dissent); cvp_left += 1
+on-arrival: resources -= 1; z_relation += 6*(1 - dissent); cvp_left += 1; cvprel += 1
 
 It's not exactly easy to get the <span style="color: #000000;">Christians</span> to like us again—but it's not impossible either. We will leverage our connections with their <span style="color: #FF7F00;">Christian Left</span> and Labor factions to lay the groundwork for a potential reconciliation between our two parties.
 
@@ -109,7 +109,7 @@ view-if: not lvp_formed and not dvp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 8*(1 - dissent); ddp_left += 1; ddp_cohesion += 0.5
+on-arrival: resources -= 1; ddp_relation += 8*(1 - dissent); ddp_left += 1; ddp_cohesion += 0.5; librel_choice += 1
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies throughout the course of the Republic. Now, as they are the only remaining liberal party, strengthening ties with them should be our top priority.
 
@@ -118,7 +118,7 @@ view-if: not lvp_formed and dvp_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent); ddp_left += 0.5; ddp_cohesion += 0.25; dvp_relation += 2 if in_grand_coalition_prussia
+on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent); ddp_left += 0.5; ddp_cohesion += 0.25; dvp_relation += 2 if in_grand_coalition_prussia; librel_choice += 1
 go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and dvp_votes >= 5; dvp_moribund if stresemann_dead = 1 and dvp_votes < 5
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has been one of our closest allies through the course of the Republic. [? if year >= 1929: Although the national shift to the right is having them question our cooperation. ?]
@@ -147,7 +147,7 @@ view-if: lvp_formed
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 1; librel_choice += 1
 go-to: lvp_stresemann if stresemann_dead = 0; lvp_loss if stresemann_dead = 1
 
 The former two liberal parties have been our closest allies through the course of the Republic. [? if year >= 1929: Although the national shift to the right is having them question our cooperation. ?]
@@ -428,6 +428,7 @@ on-arrival: rb_strength += sa_strength; rb_strength += sh_strength; rb_militancy
 The <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #7A3C00;">**SA**</span> has dissolved and joined the Reichsbanner!
 
 @spd_alone
+on-arrival: free_choice += 1
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
 
