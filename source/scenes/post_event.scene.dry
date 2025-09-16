@@ -156,6 +156,9 @@ if (Q.reichswehr_strength < 0) {
 if (Q.pro_republic >= 100) {
     Q.pro_republic = 99;
 }
+
+Q.total_choice = Q.worker_choice + Q.new_choice + Q.old_choice + Q.rural_choice + Q.cath_choice + Q.unem_choice
+
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
