@@ -1,2 +1,14 @@
-title: campaigning
-new-page: True
+title: Campaigning
+new-page: true
+view-if: not rubicon and worker_choice >= 2 or new choice >= 2 or old_choice >= 2 or rural_choice >= 2 or unem_choice >= 2 or cath_choice >= 2 or (rural_choice+cath_choice) >= 2 or (new_choice+old_choice) >= 2 or (worker_choice+unem_choice) >= 2 or (new_choice+worker_choice) >= 2 or free_choice >= 2
+on-arrival: free_choice += 1
+max-visits: 100000
+is-card: true
+frequency: 20
+tags: party_affairs
+
+Notes
+Boost for each voter base
+Boost for multiple voter bases if you have thir chhoices
+boost from iron front and other organisations
+etc
