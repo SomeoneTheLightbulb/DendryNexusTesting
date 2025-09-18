@@ -16,17 +16,17 @@ The <span style="color: #c00000;">**SPD**</span> cannot govern by itself yet. Be
 - @liberals_lvp: Strengthen our bonds with the <span style="color: #FFCC00;">Liberal People's Party</span>.
 - @center: Strengthen our bonds with the Catholic [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
 - @cvp: Reconcile with the <span style="color: #000000;">Christian People's Party</span>.
-- @kpd: Work towards repairing relationships with the <span style="color: #700000;">Communist Party</span>.
+- @kpde: Work towards repairing relationships with the <span style="color: #700000;">Communist Party</span>.
 - @dnvp: Open dialogue with [? if dnvp_leader != "Lambach": Treviranus and the <span style="color: #0087DC;">People's Conservatives</span>?][? if dnvp_leader == "Lambach": Lambach and the <span style="color: #6D5298;">Christian Socialists</span>?] of the <span style="color: #3E88B3;">**DNVP**</span>.
 - @nsdap: Establish contact with Strasser and the <span style="color: #7A3C00;">Nazi Party</span>'s left wing.
 - @spd_alone: The <span style="color: #c00000;">SPD</span> can stand alone for now.
 - @easy_discard
 
-@kpd
+@kpde
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1; comrel_choice += 1
+on-arrival: resources -= 1; kpd_inter_party_seen += 1; comrel_choice += 1;
 go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1;
 
 @kpd_1
