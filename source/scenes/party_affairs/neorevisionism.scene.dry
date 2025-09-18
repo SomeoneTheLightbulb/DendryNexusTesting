@@ -18,7 +18,7 @@ Several young <span style="color: #f0456a;">socialists</span>, led by Carlo Mier
 - @easy_discard
 
 @support_neo
-on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1; peoples_party_support += 1
+on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1; peoples_party_support += 1; propaganda_choice += 1
 
 We support the new leaders, and start using new-style propaganda techniques in our campaigns. The results are uncertain so far...
 
