@@ -9,14 +9,6 @@ card-image: img/weimar_coalition_2.jpg
 
 = Inter-Party Relationships
 
-- @kpde: Work towards repairing relationships with the <span style="color: #700000;">Communist Party</span>.
-@kpde
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1; comrel_choice += 1;
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1;
-
 The <span style="color: #c00000;">**SPD**</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">Center</span>, and [? if ddp_name == "DDP" and not lvp_formed: <span style="color: #D3C24D;">**Democratic**</span>?][? if ddp_name == "DStP" and not lvp_formed: <span style="color: #D3C24D;">**State**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**Liberal People's**</span>?] parties. [? if cvp_formed: However the formation of the <span style="color: #000000;">**[+ z_party_name +]**</span> has only really made cooperation with the <span style="color: #D3C24D;">liberals</span> possible. ?] We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
 - @liberals: Strengthen our bonds with the left-liberal [? if ddp_name == "DDP": <span style="color: #D3C24D;">German Democratic Party</span>?][? if ddp_name == "DStP": <span style="color: #D3C24D;">German State Party</span>?] and conservative-liberal <span style="color: #C0A054;">German People's Party</span>.
