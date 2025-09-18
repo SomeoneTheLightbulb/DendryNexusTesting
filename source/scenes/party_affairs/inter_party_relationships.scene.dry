@@ -22,6 +22,13 @@ The <span style="color: #c00000;">**SPD**</span> cannot govern by itself yet. Be
 - @spd_alone: The <span style="color: #c00000;">SPD</span> can stand alone for now.
 - @easy_discard
 
+@kpde
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; kpd_inter_party_seen += 1; comrel_choice += 1;
+go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1;
+
 @kpd_1
 on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2 if z_ideology == "Right"; dvp_relation -= 3; ddp_relation -= 2; lvp_relation -= 3
 
@@ -47,7 +54,6 @@ This leads to tensions with the moderates and reformists within our party, and c
 on-arrival: kpd_relation -= 3
 
 We have no need to apologize for the actions of Ebert and Noske; it is the <span style="color: #700000;">communists</span>' fault for launching a violent insurrection.
-
 
 @kpd_2
 on-arrival: kpd_relation += 8*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; dvp_relation -= 3; lvp_relation -= 3; ddp_relation -= 3
@@ -423,12 +429,5 @@ The <span style="color: #3E88B3;">**Stahlhelm**</span> and <span style="color: #
 on-arrival: free_choice += 1
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
-
-@kpde
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1; comrel_choice += 1;
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectifed_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectifed_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1;
 
 - @return: Continue...
