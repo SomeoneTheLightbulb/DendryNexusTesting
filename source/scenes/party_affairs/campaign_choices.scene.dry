@@ -48,3 +48,6 @@ ameri_choice: increases ameri_help slightly (what does this do???)
 bigmedia_choice: relates to choices with media
 propaganda_choice: use with other choices to decrese specific parties voteshares
 reflean_choice: use with other choices to help reformists, or help them acheive their goals
+cenlean_choice: use with other choices to help centrists, or help them acheive their goals
+leftlean_choice: use with other choices to hel leftists, or help them acheive their goals
+lablean_choice: use with other choices to help labour or help them acheive their goals
