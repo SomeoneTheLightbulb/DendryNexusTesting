@@ -36,6 +36,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1 if new_middle_spd >= 3; new_choice += 1 if expansion = 1;
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards <span style="color: #c00000;">socialism</span> among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
@@ -44,6 +45,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1 if old_middle_spd >= 5; old_middle_spd -= 1*(1-dissent) if sup_labor > sup_bourg and expansion = 1; old_middle_spd += 1*(1-dissent) if sup_labor < sup_bourg and expansion = 1; old_middle_spd -= 2*(1-dissent) if sup_labor > ((sup_bourg + 1)*2); old_middle_spd += 1*(1-dissent) if sup_bourg > ((sup_labor + 1)*2) and expansion = 1; old_choice += 1 if expansion = 1;
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
@@ -52,6 +54,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2; rural_choice += 1 if expansion = 1
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
 
@@ -60,6 +63,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2; unem_choice += 1 if expansion = 1
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
 
@@ -69,6 +73,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: peoples_party == 1
 on-arrival: catholics_spd += 6*(1-dissent); catholics_spd += 2*(1-dissent) if reichskonkordat = 1 and expansion = 1; resources -= 1; cath_choice += 1 if expansion = 1;
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaigning among Catholics.
 
@@ -78,5 +83,6 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources
 view-if: expansion = 1
 on-arrival: catholics_spd += 1*(1-dissent); resources -= 1; unemployed_spd += 1*(1-dissent); rural_spd += 1*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 1*(1-dissent); workers_spd += 1*(1-dissent); catholics_spd += 2*(1-dissent) if reichskonkordat = 1; catholics_spd -= 1 if homoseuxal_rights >= 1; rural_spd += 2*(1-dissent) if rural_policy >= 2; unemployed_spd += 1*(1-dissent) if welfare >= 0; unemployed_spd += works_program; old_middle_spd += 1*(1-dissent) if peoples_party > 0; new_middle_spd += 1*(1-dissent) if peoples_party >0; workers_spd += 1*(1-dissent) if welfare >= 1; workers_spd += 1*(1-dissent) if works_program >= 1;
+go-to: campaign_choices if expansion = 1
 
 We have increased our campaign among all voting blocs [? if reichskonkordat = 1: Our campign among Catholics is made more effective by us forming the Reichskonkordat ?][? if homosexual_rights >= 1: Our campaign among Catholics is made less effective by us reforming the laws against <span style="color: red;">ho</span><span style="color: orange;">m</span><span style="color: yellow;">o</span><span style="color: green;">se</span><span style="color: blue;">xu</span><span style="color: purple;">als</span> ?][? if rural_policy >= 2: Our progress in the <span style="color: green;"Rural</span> Ministry has made us more popular among <span style="color: green;"Rural</span> voters ?][? if welfare >= 0: Our campaign among the unemployed is improved by our healthy welfare system ?][? if works_program >= 1: Our campaign among the unemployed and workers is improved by the institution of a works program ?][? if peoples_party > 1: Our campaign among the middle class is improved by us being a Peoples Party ?][? if welfare >= 1: Our campaign among the workers is improved by our healthy welfare system ?]
