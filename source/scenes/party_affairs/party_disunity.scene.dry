@@ -17,6 +17,8 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if labor_dissent > 30 : The trade unions disagree with our present course of action. ?]
 [? if left_dissent > 30: Leftists are making noises about another party split. ?]
 [? if neorevisionist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
+[? if business_disssent > 30 and business = 1 : The Business wing is in disagreement with party direction ?]
+[? if ruralwing_dissent > 30 and ruralwing = 1 : The Rural wing is unhappy about party policy ?]
 
 Something must be done to reinforce party unity.
 
@@ -31,7 +33,7 @@ Something must be done to reinforce party unity.
 
 @enforce_unity
 title: Enforce party discipline.
-on-arrival: reformist_dissent -= 8; center_dissent -= 8; labor_dissent -= 8; left_dissent -= 8; neorevisionist_dissent -= 8; (workers_spd -= (dissent * 5) if dissent_choice >= 3 and expansion = 1; workers_spd -= (dissent * 10) if expansion = 0; workers_spd -= (dissent * 10) if dissent_choice < 3 and expansion = 1; new_middle_spd -= (dissent * 3) if dissent_choice >= 3 and expansion = 1; new_middle_spd -= (dissent * 5) if expansion = 0; new_middle_spd -= (dissent * 5) if dissent_choice < 3 and expansion = 1; (unemployed_spd -= (dissent * 3) if dissent_choice >= 3 and expansion = 1; unemployed_spd -= (dissent * 5) if expansion = 0; unemployed_spd -= (dissent * 5) if expansion = 1 and dissent_choice < 3; old_middle_spd -= (dissent * 5) if business = 1 and dissent_choice < 3; old_middle_spd -= (dissent * 3) if business = 1 and dissent choice >= 3
+on-arrival: reformist_dissent -= 8; center_dissent -= 8; labor_dissent -= 8; left_dissent -= 8; neorevisionist_dissent -= 8; (workers_spd -= (dissent * 5) if dissent_choice >= 3 and expansion = 1; workers_spd -= (dissent * 10) if expansion = 0; workers_spd -= (dissent * 10) if dissent_choice < 3 and expansion = 1; new_middle_spd -= (dissent * 3) if dissent_choice >= 3 and expansion = 1; new_middle_spd -= (dissent * 5) if expansion = 0; new_middle_spd -= (dissent * 5) if dissent_choice < 3 and expansion = 1; unemployed_spd -= (dissent * 3) if dissent_choice >= 3 and expansion = 1; unemployed_spd -= (dissent * 5) if expansion = 0; unemployed_spd -= (dissent * 5) if expansion = 1 and dissent_choice < 3; old_middle_spd -= (dissent * 5) if business = 1 and dissent_choice < 3; old_middle_spd -= (dissent * 3) if business = 1 and dissent choice >= 3
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
 
