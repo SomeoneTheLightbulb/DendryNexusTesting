@@ -88,7 +88,7 @@ Giving the business wing more influence is offensive to all wings of the party, 
 title: Give concessions to the rural wing
 subtitle: this is unpopular with the left-wing and the labour wings of our party
 view-if: ruralwing_dissent > 30 and ruralwing = 1
-on-arrival: ruralwing_dissent -= 15; left_dissent += 10; center_dissent += 10; labor dissent += 10;
+on-arrival: ruralwing_dissent -= 15; left_dissent += 10; center_dissent += 10; labor_dissent += 10;
 
 Giving farmers more influence is unpopular among leftists and centrists, as they view farmers as part of the petit bourgeoise, and to the labour wing, as labour prefers to focus on industrial workers
 
