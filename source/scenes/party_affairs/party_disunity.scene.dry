@@ -17,7 +17,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if labor_dissent > 30 : The trade unions disagree with our present course of action. ?]
 [? if left_dissent > 30: Leftists are making noises about another party split. ?]
 [? if neorevisionist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
-[? if business_disssent > 30 and business = 1 : The Business wing is in disagreement with party direction ?]
+[? if business_dissent > 30 and business = 1 : The Business wing is in disagreement with party direction ?]
 [? if ruralwing_dissent > 30 and ruralwing = 1 : The Rural wing is unhappy about party policy ?]
 
 Something must be done to reinforce party unity.
@@ -58,14 +58,14 @@ We have promised to take more policy suggestions from the centrists. Both the le
 @concessions_left
 title: Give concessions to the left.
 view-if: left_dissent > 30
-on-arrival: left_dissent -= 15; reformist_dissent += 10; center_dissent += 5 leftlean_choice += 1
+on-arrival: left_dissent -= 15; reformist_dissent += 10; center_dissent += 5; leftlean_choice += 1
 
 We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the reformists and centrists.
 
 @concessions_labor
 title: Give concessions to labor.
 view-if: labor_dissent > 30
-on-arrival: labor_dissent -= 15; center_dissent += 10 lablean_choice += 1
+on-arrival: labor_dissent -= 15; center_dissent += 10; lablean_choice += 1
 
 The trade unions will be granted more influence in party decision making. This upsets the centrists, who would prefer to centralize political decision making within the party.
 
@@ -80,7 +80,7 @@ Giving the neorevisionists more influence will cause increased dissent from the 
 title: Give concessions to the business wing
 subtitle: This is unpopular among every other wing of the party
 view-if: business_dissent > 30 and business = 1
-on-arrival: business_dissent -= 20; left_dissent += 20; center_dissent += 15; labour_dissent += 20; reformist_dissent += 10; neorevisionist_dissent += 10; ruralwing_dissent += 5; buslean_choice += 1; old_middle_spd += 5*(1-dissent);
+on-arrival: business_dissent -= 20; left_dissent += 20; center_dissent += 15; labor_dissent += 20; reformist_dissent += 10; neorevisionist_dissent += 10; ruralwing_dissent += 5; buslean_choice += 1; old_middle_spd += 5*(1-dissent);
 
 Giving the business wing more influence is offensive to all wings of the party, especially labour & the left.
 
@@ -88,7 +88,7 @@ Giving the business wing more influence is offensive to all wings of the party, 
 title: Give concessions to the rural wing
 subtitle: this is unpopular with the left-wing and the labour wings of our party
 view-if: ruralwing_dissent > 30 and ruralwing = 1
-on-arrival: ruralwing_dissent -= 15; left_dissent += 10; center_dissent += 10; labour dissent += 10;
+on-arrival: ruralwing_dissent -= 15; left_dissent += 10; center_dissent += 10; labor dissent += 10;
 
 Giving farmers more influence is unpopular among leftists and centrists, as they view farmers as part of the petit bourgeoise, and to the labour wing, as labour prefers to focus on industrial workers
 
