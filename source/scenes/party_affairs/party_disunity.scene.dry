@@ -19,7 +19,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if neorevisionist_dissent > 30 and neorevisionism = 1 : Neorevisionists are in disagreement about our political direction. ?]
 [? if business_dissent > 30 and business = 1 : The Business wing is in disagreement with party direction ?]
 [? if ruralwing_dissent > 30 and ruralwing = 1 : The Rural wing is unhappy about party policy ?]
-[? if liberal_dissent > 30 and liberalj = 1 : The Liberals are threatening to join the [? if lvp_formed = 1 : <span style="color: #FFCC00;">**LVP**</span> ?] [? if lvp_formed = 0 : <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if liberal_dissent > 30 and liberalj = 1 : The Liberals are threatening to join the [? if lvp_formed = 1 : <span style="color: #FFCC00;">**LVP**</span> ?] [? if lvp_formed = 0 : <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?] ?]
 [? if rightcom_dissent > 30 and rightcomj = 1 : The Right Communists are threatening to split and form their own party ?]
 [? if chrileft_dissent > 30 and christj = 1 : The Christian Left are threatening to split off and form their own party ?]
 [? if fem_dissent > 30 and feminist_known = 1 : The Feminists are displeased with how the party is handling politics ?]
