@@ -1,4 +1,4 @@
-title: Campaigning
+title: Campaigning Choices
 new-page: true
 view-if: not rubicon and total_choice >= 2
 on-arrival: free_choice += 1
