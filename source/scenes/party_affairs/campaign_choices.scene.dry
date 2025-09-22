@@ -9,13 +9,13 @@ tags: party_affairs
 
 - @worker_choice_cc: Use our good standing among the Working Class to boost popularity
 - @new_choice_cc: Use our good standing among the Working Middle Class to boost popularity
-- @old_choice_cc: Use our good standing among Small Business to boost populairty
+- @old_choice_cc: Use our good standing among Small Business to boost popularity
 - @cath_choice_cc: Use our good standing among Political Catholics to boost popularity
-- @rural_choice_cc: Use our good standing among Farmers to boost populairty
+- @rural_choice_cc: Use our good standing among Farmers to boost popularity
 - @unem_choice_cc: Use our good standing among the Unemployed to boost popularity
 - @petit_choice_cc: Thanks to our choices, the petit bourgeoise (Made up of Small Business and Farmers) have warmed up to us
 - @true_worker_choice_cc: Thanks to our choices, the entirety of the working class (The Unemployed, Working Middle Class, and Industrial Workers) are more trusting of us
-- @conservative_choice_cc: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Poltical Catholics) have become more ideologically aligned with us
+- @conservative_choice_cc: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Political Catholics) have become more ideologically aligned with us
 - @middle_choice_cc: Thanks to our choices, the Middle Classes have started to ideologically shift towards us
 - @peoples_party_choice_cc: Thanks to our posturing, our non-traditional support bases are growing in size
 - @if_choice_cc: Our close cooperation with the Iron Front has expanded its size
@@ -27,70 +27,86 @@ tags: party_affairs
 - @end_cc: Stop choosing benefits
 
 @worker_choice_cc
-view-if: worker_choice >= 2 or worker_choice >= 1 and free_choice >= 1 or free_choice >= 2
+view-if: worker_choice + free_choice >= 2
 Wip
 
 @new_choice_cc
+view-if: new_choice + free_choice >= 2
 
 Wip
 
 @old_choice_cc
+view-if: ol_choice + free_choice >= 2
 
 Wip
 
 @cath_choice_cc
+view-if: cath_choice + free_choice >= 2
 
 Wip
 
 @rural_choice_cc
+view-if: rural_choice + free_choice >= 2
 
 Wip
 
 @unem_choice_cc
+view-if: unem_choice + free_choice >= 2
 
 Wip
 
 @petit_choice_cc
+view-if: old_choice + rural_choice >= 4
 
 Wip
 
 @true_worker_choice_cc
+view-if: new_choice + unem_choice + worker_choice >= 6
 
 Wip
 
 @conservative_choice_cc
+view-if: old_choice + cath_choice + rural_choice >= 7
 
 Wip
 
 @middle_choice_cc
+view-if: old_choice + new_choice >= 4
 
 Wip
 
 @peoples_party_choice_cc
+view-if: peoples_party = 1 and party_choice_flag != 1
 
 Wip
 
 @if_choice_cc
+view-if: if_choice >= 1
 
 Wip
 
 @dissent_choice_cc
+view-if: dissent_choice >= 2
 
 Wip
 
 @antifa_choice_cc
+view-if: antifa_choice >= 1
 
 Wip
 
 @antiri_choice_cc
+view-if: antiri_choice >= 1
 
 Wip
 
 @antdem_choice_cc
+view-if: antdem_choice >= 1
 
 Wip
 
 @antibo_choice_cc
+view-if: antibo >= 1
 
 Wip
 
