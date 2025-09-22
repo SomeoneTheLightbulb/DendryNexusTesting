@@ -28,7 +28,8 @@ tags: party_affairs
 
 @worker_choice_cc
 view-if: worker_choice + free_choice >= 2
-on-arrival: workers_spd += 0.1; if worker_choice >= 2 {
+on-arrival: workers_spd += 0.1;
+if worker_choice >= 2 {
     worker_choice -= 2;
 } else if worker_choice == 1 {
     worker_choice -= 1;
