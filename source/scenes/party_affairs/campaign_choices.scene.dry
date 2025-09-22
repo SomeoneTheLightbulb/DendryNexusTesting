@@ -17,7 +17,7 @@ tags: party_affairs
 - @true_worker_choice_cc: Thanks to our choices, the entirety of the working class (The Unemployed, Working Middle Class, and Industrial Workers) are more trusting of us
 - @conservative_choice_cc: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Poltical Catholics) have become more ideologically aligned with us
 - @middle_choice_cc: Thanks to our choices, the Middle Classes have started to ideologically shift towards us
-- @peoples_party_choice: Thanks to our posturing, our non-traditional support bases are growing in size
+- @peoples_party_choice_cc: Thanks to our posturing, our non-traditional support bases are growing in size
 - @if_choice_cc: Our close cooperation with the Iron Front has expanded its size
 - @dissent_choice_cc: Various choices have cooled party dissent
 - @antifa_choice_cc: Party Posturing has encouraged workers away from the Fascists
