@@ -7,9 +7,9 @@ is-card: true
 frequency: 20
 tags: party_affairs
 
-Amounts of Choice:
+Amounts of Choice:                                                  
 
-Worker Choice: [+ worker_choice +] 
+Worker Choice: [+ worker_choice +]                                       
 
 Free Choice: [+ free_choice +] 
 
