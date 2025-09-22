@@ -24,9 +24,10 @@ tags: party_affairs
 - @antiri_choice_cc: Party Posturing has encouraged workers away from the Far Right
 - @antdem_choice_cc: Party Posturing has encouraged workers away from the Anti-Democratic parties
 - @antibo_choice_cc: Party Posturing has encouraged the New Middle Class from the Bourgeoisie Parties
+- @end_cc: Stop choosing benefits
 
 @worker_choice_cc
-
+view-if: worker_choice >= 2 or worker_choice >= 1 and free_choice >= 1 or free_choice >= 2
 Wip
 
 @new_choice_cc
