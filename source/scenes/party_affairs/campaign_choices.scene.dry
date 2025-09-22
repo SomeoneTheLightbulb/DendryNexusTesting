@@ -38,7 +38,6 @@ on-arrival: on-arrival: {
     } else {
         free_choice -= 2;
     }
-}
 
 We have used our standing among the workers to increase popularity
 
