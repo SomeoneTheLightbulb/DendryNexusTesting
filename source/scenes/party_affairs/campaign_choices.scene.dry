@@ -36,7 +36,7 @@ view-if: new_choice + free_choice >= 2
 Wip
 
 @old_choice_cc
-view-if: ol_choice + free_choice >= 2
+view-if: old_choice + free_choice >= 2
 
 Wip
 
