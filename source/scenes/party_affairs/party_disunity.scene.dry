@@ -1,7 +1,7 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not sapd_formed) or (labor_dissent > 30 and not unions_independent) or (neorevisionist_dissent > 30 and neorevisionism))
+view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and reformists_resign != 1) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not sapd_formed) or (labor_dissent > 30 and not unions_independent) or (neorevisionist_dissent > 30 and neorevisionism = 1))
 on-arrival: month_actions += 1; party_disunity_timer = 4
 card-image: img/Reichstagsfraktion_der_SPD.jpg
 frequency: 200
@@ -20,7 +20,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if business_dissent > 30 and business = 1 : The Business wing is in disagreement with party direction ?]
 [? if ruralwing_dissent > 30 and ruralwing = 1 : The Rural wing is unhappy about party policy ?]
 [? if liberal_dissent > 30 and liberalj = 1 : The Liberals are threatening to join the [? if lvp_formed = 1 : <span style="color: #FFCC00;">**LVP**</span> ?] [? if lvp_formed = 0 : <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
-[? if rightcom_dissent > 30 and rightcomj = 1 : The Right Communists are threatening to split and form their owm party ?]
+[? if rightcom_dissent > 30 and rightcomj = 1 : The Right Communists are threatening to split and form their own party ?]
 [? if chrileft_dissent > 30 and christj = 1 : The Christian Left are threatening to split off and form their own party ?]
 [? if fem_dissent > 30 and feminist_known = 1 : The Feminists are displeased with how the party is handling politics ?]
 [? if pac_dissent > 30 and pacifist_known = 1 : The Pacifists are unhappy about party stance ?]
