@@ -7,7 +7,13 @@ is-card: true
 frequency: 20
 tags: party_affairs
 
+Amounts of Choice:
+Worker Choice: [+ worker_choice +]
+Free Choice: [+ free_choice +]
+
 - @worker_choice_cc: Use our good standing among the Working Class to boost popularity
+- @worker_choice_cc_mix: Use our good standing among the Working Class to boost popularity
+- @worker_choice_cc_free: Use our good standing among the Working Class to boost popularity
 - @new_choice_cc: Use our good standing among the Working Middle Class to boost popularity
 - @old_choice_cc: Use our good standing among Small Business to boost popularity
 - @cath_choice_cc: Use our good standing among Political Catholics to boost popularity
@@ -27,8 +33,25 @@ tags: party_affairs
 - @end_cc: Stop choosing benefits
 
 @worker_choice_cc
-view-if: worker_choice + free_choice >= 2
-on-arrival: workers_spd += 0.1; if worker_choice >= 2 { worker_choice -= 2; } else if worker_choice == 1 { worker_choice -= 1; free_choice -= 1; } else { free_choice -= 2; }
+view-if: worker_choice >= 2
+on-arrival: workers_spd += 0.1;
+subtitle: 2 worker_choice
+go-to: campaign_choices
+We have used our standing among the workers to increase popularity
+
+@worker_choice_cc_mix
+view-if: worker_choice >= 1 and free_choice >= 1
+subtitle: 1/1 Free/Worker Choice
+on-arrival: workers_spd += 0.1;
+go-to: campaign_choices
+
+We have used our standing among the workers to increase popularity
+
+@worker_choice_cc_free
+view-if: free_choice >= 2
+subtitle: 2 Free Choice
+on-arrival: workers_spd += 0.1;
+go-to: campaign choices
 
 We have used our standing among the workers to increase popularity
 
