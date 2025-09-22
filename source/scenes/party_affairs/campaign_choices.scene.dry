@@ -37,6 +37,7 @@ view-if: worker_choice >= 2
 on-arrival: workers_spd += 0.1;
 subtitle: 2 worker_choice
 go-to: campaign_choices
+
 We have used our standing among the workers to increase popularity
 
 @worker_choice_cc_mix
