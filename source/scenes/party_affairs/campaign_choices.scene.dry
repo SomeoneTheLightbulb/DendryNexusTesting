@@ -52,7 +52,7 @@ We have used our standing among the workers to increase popularity
 view-if: free_choice >= 2
 subtitle: 2 Free Choice
 on-arrival: workers_spd += 0.1;
-go-to: campaign choices
+go-to: campaign_choices
 
 We have used our standing among the workers to increase popularity
 
