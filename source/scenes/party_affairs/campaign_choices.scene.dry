@@ -28,6 +28,7 @@ tags: party_affairs
 
 @worker_choice_cc
 view-if: worker_choice + free_choice >= 2
+
 Wip
 
 @new_choice_cc
