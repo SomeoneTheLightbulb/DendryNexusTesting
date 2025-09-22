@@ -7,9 +7,11 @@ is-card: true
 frequency: 20
 tags: party_affairs
 
-Amounts of Choice: <br>
-Worker Choice: [+ worker_choice +] <br>
-Free Choice: [+ free_choice +] <br>
+Amounts of Choice:
+
+Worker Choice: [+ worker_choice +] 
+
+Free Choice: [+ free_choice +] 
 
 - @worker_choice_cc: Use our good standing among the Working Class to boost popularity
 - @worker_choice_cc_mix: Use our good standing among the Working Class to boost popularity
