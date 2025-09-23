@@ -5,7 +5,7 @@ on-arrival: month_actions += 1; campaigning_timer += 2 if rubicon
 max-visits: 36 or 1000 if expansion = 1
 is-card: true
 card-image: img/flags.jpg
-frequency: 105
+frequency: 125
 tags: party_affairs
 
 = Campaigning
