@@ -11,7 +11,7 @@ on-arrival: business_seen = 1
 @yesbusy
 title: Embrace the Business Faction
 subtitle: We will embrace this new business faction!
-on-arrival: business = 1; dvp_relation += 5; dvp_left += 1; spd_ddp_business += 1 if ddp_cohesion <= 1; spd_ddp_business += 1 if ddp_cohesion <= -1; spd_ddp_business += 1 if ddp_bleed > 0; spd_ddp_business if ddp_bleed >= 2; ddp_right += spd_ddp_business; ddp_relation -= (spd_ddp_business * 2); old_choice += 2; new_choice += 3;
+on-arrival: business = 1; dvp_relation += 5; dvp_left += 1; spd_ddp_business += 1 if ddp_cohesion <= 1; spd_ddp_business += 1 if ddp_cohesion <= -1; spd_ddp_business += 1 if ddp_bleed > 0; spd_ddp_business += 1 if ddp_bleed >= 2; ddp_right += spd_ddp_business; ddp_relation -= (spd_ddp_business * 2); old_choice += 2; new_choice += 3;
 
 We have embraced this new business faction, and the interests of the Middle Class as a byproduct. Additionally, the DVP as warmed up to us slightly due to our new alignment with Business [? if spd_ddp_business >= 1 : and our relations with the DDP have grown colder, as a few of the more prominent members on the Left of the DDP have joined this faction ?] .
 
