@@ -17,7 +17,7 @@ We have embraced this new business faction, and the interests of the Middle Clas
 
 @nobusy
 title: Reject the Business Faction
-subtitle: [? if peoples party = 1 : Though we may be a Peoples Party, w ?] [? if peoples party = 0 : W ?] e are still primarily for the interests of workers.
+subtitle: [? if peoples_party = 1 : Though we may be a Peoples Party, w ?] [? if peoples_party = 0 : W ?] e are still primarily for the interests of workers.
 on-arrival: dvp_relation -= 5; dvp_right += 1; ddp_cohesion += 1; old_middle_spd -= 3; new_middle_spd -= 3; new_middle_kpd += 1;
 
 We reject the new faction, for [? if peoples_party = 1 : we are still a Working-Class focused paty ?] [? if peoples_party = 0 : we are a working class party ?] , and don't want Business hampering our decisions to support the working-class. The DVP does not approve of our action [if dvp_relation <= 100 :, but who cares what they think ?] .
