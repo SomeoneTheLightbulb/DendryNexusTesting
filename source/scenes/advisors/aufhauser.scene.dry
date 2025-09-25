@@ -7,7 +7,7 @@ new-page: true
 
 = Siegfried Aufhäuser
 
-Aufhäuser is a leader of the AfA-Bund, the federation of <span style="color: #c00000;">socialist</span> white-collar trade unions.
+Aufhäuser is a leader of the AfA-Bund, the federation of <span style="color: #c00000;">socialist</span> white-collar trade unions. Aufhäuser was originally a member of the USPD, before joining the SPD in 1922 after the USPD has dissolved. Aufhäuser works tirelessly to bring the middle class into socialist views [? if new_middle_spd < 7: but has so far miserably failed ?] [? if new_middle_spd >= 10 and new_middle_spd < 20 : and has so far made considerable progress, with [+ new_middle_spd +]% of the middle class support us ?] [if new_middle_spd >= 20 : and has been sucessful in this endeavor, despite opposition from the Left and Center of our party, as [+ new_middle_spd +]% of the middle class is in support of us ?]
 
 - @white_collar
 - @union_unity
