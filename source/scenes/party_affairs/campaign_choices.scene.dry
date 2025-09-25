@@ -4,6 +4,7 @@ view-if: not rubicon and total_choice >= 2
 on-arrival: free_choice += 1 if year <= 1930
 max-visits: 100000
 is-card: true
+card-image: img/poster_3.jpg
 frequency: 20
 tags: party_affairs
 
