@@ -1,7 +1,7 @@
 title: Campaigning Choices
 new-page: true
 view-if: not rubicon and total_choice >= 2
-on-arrival: free_choice += 1
+on-arrival: free_choice += 1 if year <= 1930
 max-visits: 100000
 is-card: true
 frequency: 20
