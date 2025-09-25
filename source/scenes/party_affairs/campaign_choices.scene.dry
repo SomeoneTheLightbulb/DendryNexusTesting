@@ -9,7 +9,17 @@ tags: party_affairs
 
 Amounts of Choice:
 
-Worker Choice: [+ worker_choice +]                           
+Worker Choice: [+ worker_choice +]
+
+New Middle Choice: [+ new_choice +]
+
+Old Middle Choice: [+ old_choice +]
+
+Catholic Choice: [+ cath_choice +]
+
+Rural Choice: [+ rural_choice +]
+
+Unem choice: [+ unem_choice +]
 
 Free Choice: [+ free_choice +]
 
