@@ -28,32 +28,32 @@ Free Choice: [+ free_choice +]
 - @worker_choice_cc_mix: Use our good standing among the Working Class to boost popularity
 - @worker_choice_cc_free: Use our good standing among the Working Class to boost popularity
 - @new_choice_cc: Use our good standing among the Working Middle Class to boost popularity
-- @new_choice_cc_mix
-- @new_choice_cc_free
+- @new_choice_cc_mix: Use our good standing among the Working Middle Class to boost popularity
+- @new_choice_cc_free: Use our good standing among the Working Middle Class to boost popularity
 - @old_choice_cc: Use our good standing among Small Business to boost popularity
-- @old_choice_cc_mix
-- @old_choice_cc_free
+- @old_choice_cc_mix: Use our good standing among Small Business to boost popularity
+- @old_choice_cc_free: Use our good standing among Small Business to boost popularity
 - @cath_choice_cc: Use our good standing among Political Catholics to boost popularity
-- @cath_choice_cc_mix
-- @cath_choice_cc_free
+- @cath_choice_cc_mix: Use our good standing among Political Catholics to boost popularity
+- @cath_choice_cc_free: Use our good standing among Political Catholics to boost popularity
 - @rural_choice_cc: Use our good standing among Farmers to boost popularity
-- @rural_choice_cc_mix
-- @rural_choice_cc_free
+- @rural_choice_cc_mix: Use our good standing among Farmers to boost popularity
+- @rural_choice_cc_free: Use our good standing among Farmers to boost popularity
 - @unem_choice_cc: Use our good standing among the Unemployed to boost popularity
-- @unem_choice_cc_mix:
-- @unem_choice_cc_free
+- @unem_choice_cc_mix: Use our good standing among the Unemployed to boost popularity
+- @unem_choice_cc_free Use our good standing among the Unemployed to boost popularity
 - @petit_choice_cc: Thanks to our choices, the petit bourgeoise (Made up of Small Business and Farmers) have warmed up to us
-- @petit_choice_cc_mix
-- @petit_choice_cc_free
+- @petit_choice_cc_mix: Thanks to our choices, the petit bourgeoise (Made up of Small Business and Farmers) have warmed up to us
+- @petit_choice_cc_free: Thanks to our choices, the petit bourgeoise (Made up of Small Business and Farmers) have warmed up to us
 - @true_worker_choice_cc: Thanks to our choices, the entirety of the working class (The Unemployed, Working Middle Class, and Industrial Workers) are more trusting of us
-- @true_worker_choice_cc_mix
-- @true_worker_choice_cc_free
+- @true_worker_choice_cc_mix: Thanks to our choices, the entirety of the working class (The Unemployed, Working Middle Class, and Industrial Workers) are more trusting of us
+- @true_worker_choice_cc_free: Thanks to our choices, the entirety of the working class (The Unemployed, Working Middle Class, and Industrial Workers) are more trusting of us
 - @conservative_choice_cc: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Political Catholics) have become more ideologically aligned with us
-- @conservative_choice_cc_mix
-- @conservative_choice_cc_free
+- @conservative_choice_cc_mix: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Political Catholics) have become more ideologically aligned with us
+- @conservative_choice_cc_free: Thanks to our choices, the more socially conservative parts of Germany (Small Business, Farmers, and Political Catholics) have become more ideologically aligned with us
 - @middle_choice_cc: Thanks to our choices, the Middle Classes have started to ideologically shift towards us
-- @middle_choice_cc_mix
-- @middle_choice_cc_free
+- @middle_choice_cc_mix: Thanks to our choices, the Middle Classes have started to ideologically shift towards us
+- @middle_choice_cc_free: Thanks to our choices, the Middle Classes have started to ideologically shift towards us
 - @pp_choice_cc: Thanks to our posturing, our non-traditional support bases are growing in size
 - @if_choice_cc: Our close cooperation with the Iron Front has expanded its size
 - @dissent_choice_cc: Various choices have cooled party dissent
@@ -88,12 +88,32 @@ go-to: campaign_choices
 We have used our standing among the workers to increase popularity
 
 @new_choice_cc
+view-if: new_choice >= 2
+
+Wip
+
+@new_choice_cc_mix
 view-if: new_choice + free_choice >= 2
 
 Wip
 
+@new_choice_cc_free
+view-if: free_choice >= 2
+
+Wip
+
 @old_choice_cc
+view-if: old_choice >= 2
+
+Wip
+
+@old_choice_cc_mix
 view-if: old_choice + free_choice >= 2
+
+Wip
+
+@old_choice_cc_free
+view-if: free_choice >= 2
 
 Wip
 
