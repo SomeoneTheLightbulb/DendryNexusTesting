@@ -1,6 +1,6 @@
 title: Campaigning Choices
 new-page: true
-view-if: not rubicon and total_choice >= 2
+view-if: not rubicon and total_choice >= 2 and expansion >= 1
 on-arrival: free_choice += 1 if year <= 1930
 max-visits: 100000
 is-card: true
@@ -118,12 +118,32 @@ view-if: free_choice >= 2
 Wip
 
 @cath_choice_cc
+view-if: cath_choice >= 2
+
+Wip
+
+@cath_choice_cc_mix
 view-if: cath_choice + free_choice >= 2
 
 Wip
 
+@cath_choice_cc
+view-if: free_choice >= 2
+
+Wip
+
 @rural_choice_cc
+view-if: rural_choice >= 2
+
+Wip
+
+@rural_choice_cc_mix
 view-if: rural_choice + free_choice >= 2
+
+Wip
+
+@rural_choice_cc_free
+view-if: free_choice >= 2
 
 Wip
 
