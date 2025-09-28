@@ -172,7 +172,7 @@ view-if: old_choice + new_choice >= 4
 
 Wip
 
-@pP_choice_cc
+@pp_choice_cc
 view-if: peoples_party = 1 and party_choice_flag != 1
 
 Wip
