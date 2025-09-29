@@ -127,7 +127,7 @@ view-if: cath_choice + free_choice >= 2
 
 Wip
 
-@cath_choice_cc
+@cath_choice_cc_free
 view-if: free_choice >= 2
 
 Wip
@@ -148,7 +148,17 @@ view-if: free_choice >= 2
 Wip
 
 @unem_choice_cc
+view-if: unem_choice >= 2
+
+Wip
+
+@unem_choice_cc_mix
 view-if: unem_choice + free_choice >= 2
+
+Wip
+
+@unem_choice_cc_free
+view-if: free_choice >= 2
 
 Wip
 
@@ -157,8 +167,28 @@ view-if: old_choice + rural_choice >= 4
 
 Wip
 
+@petit_choice_cc_mix
+view-if: old_choice >= 1 and rural_choice >= 1 and free_choice >= 2
+
+Wip
+
+@petit_choice_cc_free
+view-if: free_choice >= 4
+
+Wip
+
 @true_worker_choice_cc
 view-if: new_choice + unem_choice + worker_choice >= 6
+
+Wip
+
+@true_worker_choice_cc_mix
+view-if: new_choice >= 1 and unem_choice >= 1 and worker_choice >= 1 and free_choice >= 3
+
+Wip
+
+@true_worker_choice_cc_free
+view-if: free_choice >= 6
 
 Wip
 
