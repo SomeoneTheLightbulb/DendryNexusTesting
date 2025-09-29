@@ -66,7 +66,7 @@ Free Choice: [+ free_choice +]
 @worker_choice_cc
 view-if: worker_choice >= 2
 on-arrival: workers_spd += 0.1;
-subtitle: 2 worker_choice
+subtitle: 2 worker choice
 go-to: campaign_choices
 
 We have used our standing among the workers to increase popularity
@@ -89,16 +89,25 @@ We have used our standing among the workers to increase popularity
 
 @new_choice_cc
 view-if: new_choice >= 2
+on-arrival: new_middle_spd += 0.1; new_choice -= 2
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @new_choice_cc_mix
 view-if: new_choice + free_choice >= 2
+on-arrival: new_middle_spd += 0.1; new_choice -= 1; free_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @new_choice_cc_free
 view-if: free_choice >= 2
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
