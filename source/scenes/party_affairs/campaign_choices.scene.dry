@@ -1,7 +1,7 @@
 title: Campaigning Choices
 new-page: true
 view-if: not rubicon and total_choice >= 2 and expansion >= 1
-on-arrival: free_choice += 1 if year <= 1930; party_choice_flag = 0
+on-arrival: free_choice += 1 if year <= 1930 and cc_choice_cc_flag != 1; party_choice_flag = 0; cc_choice_cc_flag = 1
 max-visits: 100000
 is-card: true
 card-image: img/poster_3.jpg
@@ -268,4 +268,5 @@ view-if: antibo >= 1
 Wip
 
 @end_cc
+on-arrival: cc_choice_cc_flag = 0
 go-to: root
