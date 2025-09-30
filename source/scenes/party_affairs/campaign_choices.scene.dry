@@ -289,7 +289,7 @@ Wip
 
 @middle_choice_cc_mix
 view-if: old_choice >= 2 and new_choice >= 2 and free_choice >= 2
-on-arrival: new_middle_spd += 0.5; old_middle_spd; free_choice -= 2; new_choice -= 2; old_choice -= 2
+on-arrival: new_middle_spd += 0.5; old_middle_spd += 0.5; free_choice -= 2; new_choice -= 2; old_choice -= 2
 subtitle: 2 new middle choice
 go-to: campaign_choices
 
