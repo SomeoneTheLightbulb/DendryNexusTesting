@@ -65,7 +65,7 @@ Free Choice: [+ free_choice +]
 
 @worker_choice_cc
 view-if: worker_choice >= 2
-on-arrival: workers_spd += 0.1;
+on-arrival: workers_spd += 0.1; worker_choice -= 2
 subtitle: 2 worker choice
 go-to: campaign_choices
 
@@ -74,7 +74,7 @@ We have used our standing among the workers to increase popularity
 @worker_choice_cc_mix
 view-if: worker_choice >= 1 and free_choice >= 1
 subtitle: 1/1 Free/Worker Choice
-on-arrival: workers_spd += 0.1;
+on-arrival: workers_spd += 0.1; worker choice -= 1; free_choice -= 1;
 go-to: campaign_choices
 
 We have used our standing among the workers to increase popularity
@@ -82,7 +82,7 @@ We have used our standing among the workers to increase popularity
 @worker_choice_cc_free
 view-if: free_choice >= 2
 subtitle: 2 Free Choice
-on-arrival: workers_spd += 0.1;
+on-arrival: workers_spd += 0.1; free_choice -= 2
 go-to: campaign_choices
 
 We have used our standing among the workers to increase popularity
@@ -113,157 +113,250 @@ Wip
 
 @old_choice_cc
 view-if: old_choice >= 2
+on-arrival: new_middle_spd += 0.1; old_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @old_choice_cc_mix
 view-if: old_choice + free_choice >= 2
+on-arrival: old_middle_spd += 0.1; old_choice -= 1; free_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @old_choice_cc_free
 view-if: free_choice >= 2
+on-arrival: old_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @cath_choice_cc
 view-if: cath_choice >= 2
+on-arrival: catholics_spd += 0.1; cath_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @cath_choice_cc_mix
 view-if: cath_choice + free_choice >= 2
+on-arrival: catholics_spd += 0.1; caht_choice -= 1; free_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @cath_choice_cc_free
 view-if: free_choice >= 2
+on-arrival: catholics_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @rural_choice_cc
 view-if: rural_choice >= 2
+on-arrival: rural_spd += 0.1; rural_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @rural_choice_cc_mix
 view-if: rural_choice + free_choice >= 2
+on-arrival: rural_spd += 0.1; free_choice -= 1; rural_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @rural_choice_cc_free
 view-if: free_choice >= 2
+on-arrival: rural_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @unem_choice_cc
 view-if: unem_choice >= 2
+on-arrival: unemployed_spd += 0.1; unem_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @unem_choice_cc_mix
 view-if: unem_choice + free_choice >= 2
+on-arrival: unemployed_spd += 0.1; free_choice -= 1; unem_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @unem_choice_cc_free
 view-if: free_choice >= 2
+on-arrival: unemployed_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @petit_choice_cc
 view-if: old_choice + rural_choice >= 4
+on-arrival: old_middle_spd += 0.15; rural_spd += 0.15; old_choice -= 2; rural_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @petit_choice_cc_mix
 view-if: old_choice >= 1 and rural_choice >= 1 and free_choice >= 2
+on-arrival: old_middle_spd += 0.15; rural_spd += 0.15; free_choice -= 2; rural_choice -= 1; old_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @petit_choice_cc_free
 view-if: free_choice >= 4
+on-arrival: old_middle_spd += 0.15; rural_spd += 0.15; free_choice -= 4;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @true_worker_choice_cc
 view-if: new_choice + unem_choice + worker_choice >= 6
+on-arrival: new_middle_spd += 0.15; unemployed_spd += 0.15; workers_spd += 0.15; new_choice -= 2; unem_choice -= 2; worker_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @true_worker_choice_cc_mix
 view-if: new_choice >= 1 and unem_choice >= 1 and worker_choice >= 1 and free_choice >= 3
+on-arrival: new_middle_spd += 0.15; unemployed_spd += 0.15; workers_spd += 0.15; free_choice -= 3; new_choice -= 1; unem_choice -= 1; worker_choice -= 1;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @true_worker_choice_cc_free
 view-if: free_choice >= 6
+on-arrival: new_middle_spd += 0.15; unemployed_spd += 0.15; workers_spd += 0.15; free_choice -= 6;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @conservative_choice_cc
 view-if: old_choice + cath_choice + rural_choice >= 7
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @conservative_choice_cc_mix
 view-if: old_choice >= 1 and cath_choice >= 1 and rural_choice >=1 and free_choice >= 4
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @conservative_choice_cc_free
 view-if: free_choice >= 7
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @middle_choice_cc
 view-if: old_choice + new_choice >= 4
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @middle_choice_cc_mix
 view-if: old_choice >= 1 and new_choice >= 1 and free_choice >= 2
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @middle_choice_cc_free
 view-if: free_choice >= 4
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @pp_choice_cc
 view-if: peoples_party = 1 and party_choice_flag != 1
 on-arrival: party_choice_flag = 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @if_choice_cc
 view-if: if_choice >= 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @dissent_choice_cc
 view-if: dissent_choice >= 2
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @antifa_choice_cc
 view-if: antifa_choice >= 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @antiri_choice_cc
 view-if: antiri_choice >= 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @antdem_choice_cc
 view-if: antdem_choice >= 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
 @antibo_choice_cc
 view-if: antibo >= 1
+on-arrival: new_middle_spd += 0.1; free_choice -= 2;
+subtitle: 2 new middle choice
+go-to: campaign_choices
 
 Wip
 
