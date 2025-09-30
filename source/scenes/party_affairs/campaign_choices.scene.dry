@@ -74,7 +74,7 @@ We have used our standing among the workers to increase popularity
 @worker_choice_cc_mix
 view-if: worker_choice >= 1 and free_choice >= 1
 subtitle: 1/1 Free/Worker Choice
-on-arrival: workers_spd += 0.1; worker choice -= 1; free_choice -= 1;
+on-arrival: workers_spd += 0.1; worker_choice -= 1; free_choice -= 1;
 go-to: campaign_choices
 
 We have used our standing among the workers to increase popularity
