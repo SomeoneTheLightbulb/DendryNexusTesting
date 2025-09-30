@@ -257,7 +257,7 @@ Wip
 
 @conservative_choice_cc
 view-if: old_choice + cath_choice + rural_choice >= 9
-on-arrival: old_middle_spd += 0.5; rural_spd +=- 0.5; catholics_spd += 0.5; old_choice -= 3; cath_choice -= 3; rural_choice -= 3;
+on-arrival: old_middle_spd += 0.5; rural_spd += 0.5; catholics_spd += 0.5; old_choice -= 3; cath_choice -= 3; rural_choice -= 3;
 subtitle: 2 new middle choice
 go-to: campaign_choices
 
