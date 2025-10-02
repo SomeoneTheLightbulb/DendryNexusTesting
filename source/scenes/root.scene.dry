@@ -1288,6 +1288,7 @@ Here, you can test your skills.
 - @hitler_mode
 - @wacky_weimar
 - @expanded_mode
+- @unemployed_mode
 - @start: Go back.
 
 
@@ -1470,6 +1471,13 @@ Q.wacky_weimar = 1;
 !}
 go-to: 1928_mod_mode_lite
 
+@unemployed_mode
+title: <div style="text-align: center;"><img src="img/job.png" alt="Jobless Mode"></div>
+subtitle: Unemployment will start at 100%.
+on-arrival: {!
+Q.jobless_mode = 1;
+
+Q.unemployed = 100;
 
 @1928_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
