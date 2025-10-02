@@ -115,6 +115,6 @@ The WTB plan has become a popular rallying cry for our party. The workers are ea
 
 
 @local
-on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); worker_choice += 1 if worker_choice > 0; unem_choice += 1 if unem_choice > 0; new_choice += if new_choice > 1;
+on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent); worker_choice += 1 if worker_choice > 0; unem_choice += 1 if unem_choice > 0; new_choice += 1 if new_choice > 1;
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
