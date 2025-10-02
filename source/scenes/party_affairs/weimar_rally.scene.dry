@@ -19,7 +19,7 @@ Membership has surged, and fresh funding has arrived from all three coalition pa
 - @easy_discard
 
 @nazi
-on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
+on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2; antifa_choice += 1;
 
 The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
 
@@ -29,11 +29,11 @@ on-arrival: workers_spd += (pro_republic / 15); new_middle_spd += (pro_republic 
 We rally alongside politicians from the <span style="color: #000000;">Center</span> and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?], united in our commitment to the Republic.
 
 @republic
-on-arrival: pro_republic += 6
+on-arrival: pro_republic += 6; antdem_choice += 1;
 
 The <span style="color: #7A3C00;">Nazi</span> and <span style="color: #700000;">Communist</span> propaganda machines have poisoned the public’s view of the Republic. Our goal is to counter their narrative with propaganda of our own.
 
 @relation
-on-arrival: z_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); ddp_left += 1; lvp_left += 1
+on-arrival: z_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); ddp_left += 1; lvp_left += 1; cenrel_choice += 1; librel_choice += 1;
 
 We’ve been able to strengthen our relations with the involved parties through the participation of figures like Heuss and Wirth—members of the [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] and the <span style="color: #000000;">Center Party</span>, respectively.
