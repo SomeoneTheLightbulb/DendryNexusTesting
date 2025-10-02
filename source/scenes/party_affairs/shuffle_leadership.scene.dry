@@ -352,6 +352,9 @@ frequency: 1
 - @labor: Add Labor
 - @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
+- #rural: Add Rural advisors
+- #business: Add advisors from our Business win
+- #liberals: Add liberals
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
