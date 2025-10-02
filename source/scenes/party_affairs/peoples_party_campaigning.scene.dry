@@ -37,7 +37,7 @@ As a people's party, the urban poor are still a key part of our constituency.
 
 @campaign_women
 title: Campaign among women of all classes.
-on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); worker_choice += 1 if worker_choice > 2; new_choice += 1 if new_choice > 2; old_choice += 1 if old_choice > 3; rural choice += 1 if rural_choice > 3; unem_choice += 1 if unem_choice > 2;
+on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent); worker_choice += 1 if worker_choice > 2; new_choice += 1 if new_choice > 2; old_choice += 1 if old_choice > 3; rural_choice += 1 if rural_choice > 3; unem_choice += 1 if unem_choice > 2;
 
 As a people's party, we represent women of all classes.
 
