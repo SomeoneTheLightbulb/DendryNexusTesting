@@ -17,7 +17,7 @@ The workers are still a key part of our constituency, and we must not alienate t
 
 @campaign_middle
 title: Campaign among the middle classes.
-on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent) new_choice += 1; old_choice += 1;
+on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); new_choice += 1; old_choice += 1;
 
 As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
 
