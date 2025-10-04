@@ -1,0 +1,23 @@
+title: The Left-Nationalists of the ASPD seek to rejoin the SPD!
+subtitle: Our coalition with the Saxon Bourgeois forces has convinces the ASPD to rejoin us
+new-page: true
+tags: event
+view-if: year >= 1928 and month >= 1 and spd_aspd = 1 and leftnat_seen != 1 and expansion = 1 and impossible_variable >= 3273
+on-arrival: leftnat_seen = 1;
+
+- @yesaspd
+- @noaspd
+
+@yesaspd
+title: Embrace the ASPD's reintergration!
+subtitle: We will embrace their return, and grant them influence within our party!
+on-arrival: leftnat_joined = 1; dvp_relation += 5; dvp_left += 1; spd_ddp_business += 1 if ddp_cohesion <= 1; spd_ddp_business += 1 if ddp_cohesion <= -1; spd_ddp_business += 1 if ddp_bleed > 0; spd_ddp_business += 1 if ddp_bleed >= 2; ddp_right += spd_ddp_business; ddp_relation -= (spd_ddp_business * 2); old_choice += 2; new_choice += 3;
+
+We have embraced this new business faction, and the interests of the Middle Class as a byproduct. Additionally, the DVP as warmed up to us slightly due to our new alignment with Business [? if spd_ddp_business >= 1 : and our relations with the DDP have grown colder, as a few of the more prominent members on the Left of the DDP have joined this faction ?] .
+
+@noaspd
+title: Accept the reintergration,
+subtitle: The ASPD will not have any influence within our party, however.
+on-arrival: leftnat_joined = 0; ddp_cohesion += 1; business_dissent += 5; left_dissent -= 5; center_dissent -= 5; neorevisionist_dissent -= 5; liberal_dissent -= 5; left_strength += 5; ddp_relation += 15; dvp_relation -= 10; z_relation -= 5; coalition_dissent += 1 if in_popular_front; coalition_dissnet += 1 if in_grand_coalition
+
+We reject giving this new faction influence, for they are both nationalists, and completely insane. Most of our party, and the DDP, approves of this position. The DVP and Z [? if business_joined = 1 :, and also Business disapproves, however. ?]
