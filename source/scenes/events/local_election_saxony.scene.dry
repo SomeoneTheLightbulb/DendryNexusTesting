@@ -470,7 +470,7 @@ go-to: saxony_coalition_menu
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_saxony_elections_vote +]% {!</td><td>!} [+ sapd_r_saxony +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ aspd_r_saxony +]% {!</td></tr>!}
+[? if leftnat_joined = 0 : {!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}ASPD: {!</td><td>!} [+ aspd_saxony_elections_vote +]% {!</td><td>!} [+ aspd_r_saxony +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}KPD: {!</td><td>!} [+ kpd_saxony_elections_vote +]% {!</td><td>!} [+ kpd_r_saxony +]%  {!</td></tr>!}
 
@@ -601,7 +601,7 @@ subtitle: We have somehow reconciled with the bourgeois parties, that they're wi
 unavailable-subtitle: [? if z_relation < 50 and stegerwald_path: We need higher relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?][? if dvp_toleration_threshold_fail_saxony: We need higher relations with the [? if not lvp_formed: <span style="color: #C0A054;">DVP</span>?][? if lvp_formed: <span style="color: #FFCC00;">LVP</span>?]. ?][? if left_strength >= 15: Our Saxon organization is too left-wing to even consider this as an option—after all, their stubborn refusal in the past led to the expulsion of the majority of the parliamentary faction and the subsequent formation of the <span style="color: #fe9e00;">ASPD</span>. ?]
 view-if: spd_coalition_saxony >= 50
 choose-if: spd_coalition_possible_saxony and left_strength < 15
-on-arrival: saxony_spd = 1; saxony_groko = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1
+on-arrival: saxony_spd = 1; saxony_groko = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1; spd_aspd = 1;
 
 Somehow, the bourgeois parties are willing to form a [? if lvp_formed and stegerwald_path: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>?][? if not lvp_formed or not stegerwald_path: Grand?] Coalition with us, rather than continuing their current government with Max Heldt and the right-wing parties.
 
