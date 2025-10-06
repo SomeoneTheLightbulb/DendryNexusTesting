@@ -46,7 +46,7 @@ if (Q.nsdap_normalized >= 0.2 ) {
     Q.reform_support += Q.nsdap_normalized;
 }
 !}
-view-if: electoral_threshold = 0; ee_ee = 26789876
+view-if: electoral_threshold = 0; ee_ee = 26
 
 # The left is opposed to this.
 
