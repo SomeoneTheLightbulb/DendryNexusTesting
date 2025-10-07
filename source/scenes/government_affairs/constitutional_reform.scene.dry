@@ -46,7 +46,7 @@ if (Q.nsdap_normalized >= 0.2 && workers_nsdap >= 20 && (old_middle_nsdap + new_
     Q.reform_support += (Q.nsdap_normalized -= 0.1);
 }
 !}
-view-if: a40 = 0 and ee_ee = 26;
+view-if: a40 = 0
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the <span style="color: #A2D8E0;">**BVP**</span>. 
 
