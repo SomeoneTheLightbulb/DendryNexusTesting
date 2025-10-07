@@ -26,18 +26,18 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 - @vote_threshold: Change the vote threshold.
 - @constructive_vonc: Ban non-constructive votes of no confidence.
 - @presidential_powers: Reduce presidential powers.
-- @article_40: Alter article 40 as part of our [? if nationalization = 1 : nationalization plan ?].
+- @article_40: Alter article 40 as part of our [? if nationalization = 1 : nationalization plan ?]. [? if nationalization = 0 : Welfare Program ?]
 - @as_is: Do not pursue constitutional reform.
 - @easy_discard
 - @cancel_advisor_action
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 
 @article_40
-subtitle: Change the vote threshold to 5% for parties to b
+subtitle: Change article 40 to provide free train rides to everyone, not just parliamentary delegates
 on-arrival: {!
 Q.reform_support = Q.spd_normalized;
-if (Q.z_relation > 30) {
-    Q.reform_support += Q.z_normalized - 0.03;
+if (Q.ddp_relation > 50) and (Q.ddp_left > (Q.ddp_right + 10) ) {
+    Q.reform_support += Q.ddp_normalized;
 }
 if (Q.kpd_relation > 50 && Q.kpd_normalized >= 0.1) {
     Q.reform_support += Q.kpd_normalized;
@@ -46,7 +46,7 @@ if (Q.nsdap_normalized >= 0.2 ) {
     Q.reform_support += Q.nsdap_normalized;
 }
 !}
-view-if: electoral_threshold == 0 and ee_ee == 26;
+view-if: a40 = 0 and ee_ee = 26;
 
 # The left is opposed to this.
 
