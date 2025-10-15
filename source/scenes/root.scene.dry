@@ -91,7 +91,8 @@ Q.reformists_resigned = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
-
+Q.business = 0;
+Q.leftnat_joined = 0;
 Q.social_patriot = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
@@ -136,6 +137,7 @@ Q.dvp_relation = 35;
 Q.dnvp_relation = 5;
 Q.nsdap_relation = 0;
 Q.lvp_relation = 0;
+Q.bvp_relation = 30
 
 Q.kpd_leader = "Thälmann";
 Q.z_leader = "Marx";
@@ -144,6 +146,7 @@ Q.cvp_ideology = "Moderate";
 Q.stegerwald_path = 0;
 Q.nsdap_leader = "Hitler";
 Q.nsdap_chancellor = "Hitler";
+Q.bvp_leader = "Karl Speck";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -263,6 +266,7 @@ Q.dnef_formed = 0;
 Q.kvp_formed = 0;
 Q.lvp_formed = 0;
 Q.cvp_formed = 0;
+Q.bap_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -546,12 +550,12 @@ Q.nsdap_in_government = 0;
 Q.spd_prussia_time = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
+// Weimar coalition = SPD + Z + DDP + BAP/SAPD toleration (If formed)
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
+// Grand coalition = SPD + Z + BVP/BAP + DDP + DVP
 // also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
+// Popular front = SPD + KPD + Z + DDP (Also + SAPD and BAP if available)
 Q.in_popular_front = 0;
 // left coalition = SPD + KPD + left-splinters
 Q.in_left_front = 0;
@@ -870,6 +874,12 @@ Q.dvp_congress_trigger = 0;
 Q.liberal_parliament_seen = 0;
 Q.dvp_reform = 0;
 Q.bourgeois_cooperation = 0;
+Q.bap_formed = 0
+Q.bvp_name = "BVP"
+Q.bvp_right = 5
+Q.bvp_left = 0
+Q.bvp_leader = "Karl Speck"
+Q.bvp_ideology =
 Q.ui1_compromise = 0;
 Q.panzerkreuser_right_seen = 0;
 Q.black_thursday_seen = 0;
