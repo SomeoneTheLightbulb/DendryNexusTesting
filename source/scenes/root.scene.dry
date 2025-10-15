@@ -879,7 +879,7 @@ Q.bvp_name = "BVP"
 Q.bvp_right = 5
 Q.bvp_left = 0
 Q.bvp_leader = "Karl Speck"
-Q.bvp_ideology =
+Q.bvp_ideology = "Moderate"
 Q.ui1_compromise = 0;
 Q.panzerkreuser_right_seen = 0;
 Q.black_thursday_seen = 0;
@@ -1251,6 +1251,7 @@ Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;
 Q.dvp_relation = 31;
+Q.bvp_relaton = 27
 Q.ddp_relation = 55;
 Q.budget = 2;
 this.state.disableSaves = true;
@@ -1269,6 +1270,7 @@ Q.rb_strength = 2000;
 Q.z_relation = 41;
 Q.kpd_relation = 21;
 Q.dvp_relation = 31;
+Q.bvp_relation = 29
 Q.ddp_relation = 55;
 Q.budget = 2;
 !}
@@ -1286,6 +1288,7 @@ Q.z_relation = 41;
 Q.kpd_relation = 21;
 Q.dvp_relation = 31;
 Q.ddp_relation = 55;
+Q.bvp_relation = 29
 Q.budget = 2;
 !}
 go-to: 1928_main
