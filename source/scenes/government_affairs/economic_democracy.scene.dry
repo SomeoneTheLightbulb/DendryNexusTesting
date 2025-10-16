@@ -19,6 +19,8 @@ As we control the Labor [? if economic_minister_party == "SPD" : and Economic ?]
 - @expand_councils_3
 - @nationalize_1
 - @cooperatives_1
+- @nationalize_banks: wip
+- @ubi
 - @return: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -75,3 +77,9 @@ We have enacted legislation that makes it easier to create cooperative enterpris
 view-if: expansion = 1 and socializations >= 2
 
 WIP. should only be available during eco crisis and after the banks have failed
+
+@ubi
+title: wip 
+view-if: expansion = 1
+
+universal basic income. see alaskan permanent oil fund
