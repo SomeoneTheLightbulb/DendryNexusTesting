@@ -70,3 +70,8 @@ choose-if: budget >= 1
 max-visits: 3
 
 We have enacted legislation that makes it easier to create cooperative enterprises of all sorts, and provide financial support to struggling cooperatives.
+
+@nationalize_banks
+view-if: expansion = 1 and socializations >= 2
+
+WIP. should only be available during eco crisis and after the banks have failed
