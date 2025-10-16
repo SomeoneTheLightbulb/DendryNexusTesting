@@ -19,6 +19,7 @@ What should our foreign policy priority be?
 - @improve_soviet
 - @improve_soviet_eco
 - @customs_union
+- @anschluss
 - @negotiate
 - @reduce_reparations
 - @settle_reparations
@@ -120,13 +121,27 @@ However, the Allies, especially <span style="color: #002654;">France</span>, are
 - @fp_menu: No, we should do something else.
 
 @customs_union_2
-on-arrival: banking_crisis_timer = 4; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; dvp_relation += 6; ddp_relation += 4; lvp_relation += 6; coalition_dissent -= 1 if coalition_dissent > 0; coup_progress -= 1; hindenburg_angry -= 15
+on-arrival: banking_crisis_timer = 4; customs_union = 1; west_relation -= 2; east_relation -= 2; z_relation += 6; z_relation += 2 if expansion = 1; dvp_relation += 6; dvp_relation += 1 if expansion = 1; ddp_relation += 4; ddp_relation += 3 if expansion = 1; lvp_relation += 6; lvp_relation += 2 if expansion = 1; bvp_relation += 5 if expansion = 1; bvp_left += 2 if expansion = 2; coalition_dissent -= 1 if coalition_dissent > 0; coup_progress -= 1; hindenburg_angry -= 15; ddp_left += 2 if expansion = 1; dvp_left += 2 if expansion = 1; lvp_left += 2 if expansion = 1; ddp_cohesion += 0.5 if expansion = 1;
 max-visits: 1
 
 We have formed a customs union with Austria! The right-wing parties are praising us for this unexpected turn of events.
 
 Immediately, <span style="color: #002654;">France</span> and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
 
+@anschluss
+title: Annex Austria into Germany!
+subtitle: This will severely damage our relations with both the western and eastern powers!
+view-if: customs_union = 1 and expansion = 1 and leftnat_joined = 1 and leftnat_strength >= left_strength and leftnat_strength >= center_strength and leftnat_strength >= rightcom_strength and anschluss = 0
+
+The right-wing and center parties have longed for a unification of Germany with Austria, and would apply heaps of praise upon us for this, and permanently bolster our relations, however our relations with the western and eastern pwoers will be severely set back [? if reparations_resolved = 0 : and this would also severely setback our reparations negotiations ?]
+
+- @anschluss_2: This is a great idea!
+- @fp_menu: Actually this isn't such a good idea after all
+
+@anschluss_2
+on-arrival: west_relation -= 12; east_relation -= 7; anschluss = 1; leftnat_strength += 10; leftnat_dissent -= 30; business_dissent -= 30 if business = 1; liberal_dissent -= 30 if liberalj = 1; center_dissent += 20; left_dissent += 20; rightcom_dissent += 30; ddp_left += 5; ddp_cohesion += 3; dvp_left += 3; lvp_left += 4; bvp_left += 6; bvp_relation += 30; z_relation += 30; lvp_relation += 30; ddp_relation += 30; dvp_relation += 30; coalition_dissent -= 3; hindenburg_angry -= 40; kpd_relation -= 20; occupation_possible = 1; workers_spd += 7; new_middle_spd += 5; old_middle += (pro_republic/10) if peoples_party = 1; rural_spd += 5 if peoples_party = 1; catholics_spd += 5 if peoples_party = 1; unemployed_spd += (pro_republic/10); pro_republic += 10; pro_republic += 10 if peoples_party = 1; nationalism -= 5 if peoples party = 1;
+
+We have annexed Austria! The right-wing and centrist parties are praising us for this shocking turn of event, but the international community has made loud complaints about this. If we aren't careful about upkeeping relations with the western powers, this may end very unfavourably for us. [? if peoples_party = 1 : A large amount of the country, once skeptical of our "Peoples Party" stance, have now aligned themselves with the SPD, seeing its commitment to the people. ?]
 
 @negotiate
 title: Negotiate regarding our remaining obligations from the Treaty of Versailles.
