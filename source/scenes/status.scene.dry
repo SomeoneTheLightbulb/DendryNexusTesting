@@ -174,6 +174,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
+[? if expansion = 1 : [? if bvp_name = "BVP" : <span class="tooltip-text" title="Bavarian Peoples Party" style="color: #A2D8E0;">**BVP**</span>: [+ bvp_relation : relationships +]?][? if bvp_name = "BAP" : <span class="tooltip-text" title="Bavarian Workers Party" style="color: #A2D8E0;">**BAP**</span>: [+ bvp_relation : relationships +]?]?]
+
 <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>[? if nsdap_split: (and its splinters)?]: [+ nsdap_relation : relationships +]
 
 = Party Leadership
@@ -212,6 +214,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: Revolutionary Volkism (Röhm)?]
 
+[? if expansion = 1 : [? if bvp_name = "BVP" : <span class="tooltip-text" title="Bavarian Peoples Party" style="color: #A2D8E0;">**BVP**</span>: Bavarian Regionalism ([+ bvp_leader +])?] [? if bvp-name = "BAP" : <span class="tooltip-text" title="Bavarian Workers Party" style="color: #A2D8E0;">**BAP**</span>: Socialist Bavarian Regionalism ([+ bvp_leader +])?]
+
 = Industrial Backing
 
 [? if dnef_formed: <span class="tooltip-text" title="German National Unity Front" style="color: #BFC8CC;">**DNEF**</span>: [? if industrial_dnef_backing == 3: high?][? if industrial_dnef_backing == 4: highest?] ?]
@@ -247,7 +251,6 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
 
 @paramilitaries
 on-arrival: {!
@@ -331,7 +334,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 [? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
-<span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
+<span style="color: #000000;">**[+ z_party_name +]**</span> +. [? if expansion = 0 : <span style="color: #A2D8E0;">**BVP**</span> ?] [? if expansion = 1 and bvp_name = "BVP" : <span style="color: #A2D8E0;">**BVP**</span> ?] [? if expansion = 1 and bvp_name = "BAP" : <span style ="color: #A2D8E0;">**BAP**</span> ?] : [+ z_votes +]%
 
 <span style="color: #700000;">**KPD**</span>: [+ kpd_votes +]%
 
