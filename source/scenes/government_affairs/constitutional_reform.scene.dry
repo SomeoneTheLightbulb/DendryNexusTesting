@@ -37,13 +37,13 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 subtitle: This will mean welfare cannot be reduced below a certain amount
 on-arrival: {!
 Q.reform_support = Q.spd_normalized;
-if (Q.ddp_relation > 50) and (Q.ddp_left > (Q.ddp_right + 2)) {
+if (Q.ddp_relation > 50) and (Q.ddp_left >= (Q.ddp_right + 2)) {
     Q.reform_support += Q.ddp_normalized;
 }
-if (Q.ddp_relation < 50) and (Q.ddp_left > (Q.ddp_right + 3)) {
+if (Q.ddp_relation <= 50) and (Q.ddp_left >= (Q.ddp_right + 3)) {
     Q.reform_support += (Q.ddp_left - (Q.ddp_right - 4))
 }
-if (Q.kpd_relation > -100) {
+if (Q.kpd_relation >= 0) {
     Q.reform_support += Q.kpd_normalized;
 }
 if (Q.z_normalized >= 0.2) {
@@ -81,8 +81,11 @@ if (Q.ddp_relation > 50) and (Q.ddp_left > (Q.ddp_right + 10) ) and (Q.ddp_name 
 if (Q.kpd_relation > 10) {
     Q.reform_support += Q.kpd_normalized;
 }
-if (Q.nsdap_normalized >= 0.2 and workers_nsdap >= 20 and (old_middle_nsdap + new_middle_nsdap) < (new_middle_spd + old_middle_spd)) {
-    Q.reform_support += (Q.nsdap_normalized -= 0.1);
+if expansion == 1 {
+    Q.nsdap_normalized -= 0.1
+}
+if (Q.nsdap_normalized >= 0.1 and workers_nsdap >= 20 and (old_middle_nsdap + new_middle_nsdap) < (new_middle_spd + old_middle_spd)) {
+    Q.reform_support += Q.nsdap_normalized;
 }
 if (Q.z_normalized >= 0.13) {
     Q.reform_support += 0.03;
@@ -104,7 +107,7 @@ The Left and Labour factions are extremely supportive of this [? if business = 1
 @vote_a40
 choose-if: reform_support >= pass_threshold and budget >= 1
 unavailable-subtitle: [? if reform_support <= pass_threshold : We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] does not trust us enough to support this policy. ?] ?] [? if budget < 1 : We don't have enough budget to implement this ?]
-on-arrival: constitutional_reform += 1; a40 = 1; ddp_relation += 5 if ddp_left > ddp_right; ddp_relation -= 10 if ddp_right < ddp_left; dvp_relation -= 15; dvp_relation -= 10 if dvp_right > dvp_left; lvp_relation -= 15; lvp_relation -= 10 if lvp_right > lvp left; left_dissent -= 10; labor_dissent -= 20; business_dissent += 10 if business = 1; workers_spd += 10; unemployed_spd += 10; budget -= 1; ddp_right += 5 if ddp_right > ddp_left; ddp_cohesion -= 1; lvp_right += 1 if lvp_right > lvp_left; 
+on-arrival: constitutional_reform += 1; a40 = 1; ddp_relation += 5 if ddp_left > ddp_right; ddp_relation -= 10 if ddp_right < ddp_left; dvp_relation -= 15; dvp_relation -= 10 if dvp_right > dvp_left; lvp_relation -= 15; lvp_relation -= 10 if lvp_right > lvp left; left_dissent -= 10; labor_dissent -= 20; business_dissent += 10 if business = 1; workers_spd += 10; unemployed_spd += 10; budget -= 1; ddp_right += 5 if ddp_right > ddp_left; ddp_cohesion -= 1; lvp_right += 1 if lvp_right > lvp_left; nsdap_normalized += 0.1
 achievement: verfassungsreform; trainiert_artikelreform
 
 We have passed a constitutional amendment to gurantee free travel by train. This has greatly increased our support among workers and the unemployed, and reduced dissent among the Left and Labor factions.
