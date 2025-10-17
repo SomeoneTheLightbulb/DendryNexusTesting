@@ -174,7 +174,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
-[? if expansion = 1 : [? if bvp_name = "BVP" : <span class="tooltip-text" title="Bavarian Peoples Party" style="color: #A2D8E0;">**BVP**</span>: [+ bvp_relation : relationships +]?][? if bvp_name = "BAP" : <span class="tooltip-text" title="Bavarian Workers Party" style="color: #A2D8E0;">**BAP**</span>: [+ bvp_relation : relationships +]?]?]
+[? if expansion == 1 : [? if bvp_name == "BVP" : <span class="tooltip-text" title="Bavarian Peoples Party" style="color: #A2D8E0;">**BVP**</span>: [+ bvp_relation : relationships +]?][? if bvp_name == "BAP" : <span class="tooltip-text" title="Bavarian Workers Party" style="color: #A2D8E0;">**BAP**</span>: [+ bvp_relation : relationships +]?]?]
 
 <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>[? if nsdap_split: (and its splinters)?]: [+ nsdap_relation : relationships +]
 
